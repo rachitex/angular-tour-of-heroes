@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero'; // Importing Hero class from hero.ts file.
+import { HEROES } from '../mock-heroes'; // Importing Heroes from mock-heroes.ts file
 
 @Component({
   selector: 'app-heroes',
@@ -7,10 +8,14 @@ import { Hero } from '../hero'; // Importing Hero class from hero.ts file.
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
+  heroes = HEROES;
+/*
   hero: Hero = {
     id: 1,
-    name: 'Windstorm'
+    name: 'Windstorm',
   };
+*/
+
 
   constructor() { }
 // OnInit interface has ngOnInit() and ngOnDestroy() for Life hooks of components.
