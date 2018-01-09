@@ -8,7 +8,6 @@ import { HeroService } from '../hero.service';
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroes: Hero[];
 /*
   hero: Hero = {
     id: 1,
@@ -16,9 +15,9 @@ export class HeroesComponent implements OnInit {
   };
 */
   selectedHero: Hero;
+  heroes: Hero[];
 
-
-  constructor() { }
+  constructor(private heroService: HeroService) { }
 // OnInit interface has ngOnInit() and ngOnDestroy() for Life hooks of components.
   ngOnInit() {
   }
