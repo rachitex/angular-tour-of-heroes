@@ -10,4 +10,8 @@ export class HeroService {
   getHeroes(): Hero[] {
     return HEROES;
   }
+
+  ngOnInit() {
+    this.getHeroes();
+  }
 }
