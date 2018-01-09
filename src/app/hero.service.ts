@@ -5,13 +5,9 @@ import { HEROES } from './mock-heroes';
 @Injectable()
 export class HeroService {
 
-  constructor() { }
+  constructor(private heroService: HeroService) { }
 
   getHeroes(): Hero[] {
     return HEROES;
-  }
-
-  ngOnInit() {
-    this.getHeroes();
   }
 }
