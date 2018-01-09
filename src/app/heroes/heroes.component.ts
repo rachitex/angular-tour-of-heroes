@@ -18,8 +18,13 @@ export class HeroesComponent implements OnInit {
   heroes: Hero[];
 
   constructor(private heroService: HeroService) { }
+
+  getHeroes(): void {
+    this.heroes = this.heroService.getHeroes();
+  }
 // OnInit interface has ngOnInit() and ngOnDestroy() for Life hooks of components.
   ngOnInit() {
+    this.getHeroes();
   }
 
   onSelect(hero: Hero): void {

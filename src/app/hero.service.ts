@@ -5,7 +5,7 @@ import { HEROES } from './mock-heroes';
 @Injectable()
 export class HeroService {
 
-  constructor(private heroService: HeroService) { }
+  constructor() { }
 
   getHeroes(): Hero[] {
     return HEROES;
