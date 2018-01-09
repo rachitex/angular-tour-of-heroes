@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero'; // Importing Hero class from hero.ts file.
-import { HEROES } from '../mock-heroes'; // Importing Heroes from mock-heroes.ts file
+import { HeroService } from '../hero.service';
 
 @Component({
   selector: 'app-heroes',
@@ -8,7 +8,7 @@ import { HEROES } from '../mock-heroes'; // Importing Heroes from mock-heroes.ts
   styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
-  heroes = HEROES;
+  heroes: Hero[];
 /*
   hero: Hero = {
     id: 1,
