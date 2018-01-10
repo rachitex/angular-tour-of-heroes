@@ -11,6 +11,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { MessageService } from './message.service';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataService } from './in-memory-data.service';
 
 
 @NgModule({
@@ -27,7 +29,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [ HeroService, MessageService ],
+  providers: [ HeroService, MessageService, InMemoryDataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
