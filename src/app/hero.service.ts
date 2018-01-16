@@ -4,6 +4,7 @@ import { HEROES } from './mock-heroes';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { MessageService } from './message.service';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable()
 export class HeroService {
